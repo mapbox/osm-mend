@@ -1,0 +1,34 @@
+{
+  "name": "osm-mend",
+  "version": "0.0.1",
+  "description": "Mend referential integrity in OpenStreetMap data files",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc tape test/*.test.js"
+  },
+  "bin": {
+    "osm-mend-osmium": "bin/osmium.js",
+    "osm-mend": "bin/osm-mend.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mapbox/osm-mend.git"
+  },
+  "author": "Mapbox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mapbox/osm-mend/issues"
+  },
+  "homepage": "https://github.com/mapbox/osm-mend#readme",
+  "devDependencies": {
+    "eslint": "^1.10.3",
+    "nyc": "^5.2.0",
+    "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "queue-async": "^1.0.7",
+    "underscore": "^1.8.3",
+    "xml2js": "^0.4.15"
+  }
+}

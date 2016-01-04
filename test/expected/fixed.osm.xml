@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm generator="osmium/1.3.0" version="0.6">
+    <node changeset="31430396" id="1" lat="48.566985" lon="13.4465242" timestamp="2015-05-24T21:25:26Z" uid="13010" user="Peda" version="13">
+        <tag k="leaf_type" v="needleleaved"/>
+        <tag k="natural" v="tree"/>
+    </node>
+    <node changeset="24482318" id="4" lat="51.3806887" lon="9.3601583" timestamp="2014-08-01T14:23:42Z" uid="1779584" user="dhuyp" version="8"/>
+    <way changeset="12642041" id="1" timestamp="2012-08-07T07:34:29Z" uid="735" user="blackadder" version="3">
+        <nd ref="1"/>
+        <nd ref="4"/>
+        <tag k="abutters" v="residential"/>
+        <tag k="access" v="private"/>
+        <tag k="highway" v="residential"/>
+        <tag k="name" v="Hampton Drive"/>
+    </way>
+    <relation changeset="1" id="1" timestamp="2012-10-05T03:00:08Z" uid="762332" user="Bleuet Mapper" version="20">
+        <member ref="1" role="" type="node"/>
+        <member ref="1" role="outer" type="way"/>
+        <tag k="natural" v="wetland"/>
+        <tag k="source" v="NRCan-CanVec-10.0"/>
+        <tag k="type" v="multipolygon"/>
+    </relation>
+</osm>
