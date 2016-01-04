@@ -1,5 +1,7 @@
 # osm-mend
 
+[![Build Status](https://travis-ci.org/mapbox/osm-mend.svg?branch=master)](https://travis-ci.org/mapbox/osm-mend)
+
 Fix referential integrity issues with any OpenStreetMap data file based on
 the current state of data accessible via the OpenStreetMap API.
 
@@ -21,7 +23,7 @@ those missing references. The steps in process are as follows:
 - gather the XML of parent elements that have missing references via [osmium-tool getid](http://docs.osmcode.org/osmium/v1.2.1/osmium-getid.html)
 - look up the current state of missing references in the [OpenStreetMap API](http://wiki.openstreetmap.org/wiki/API_v0.6#Read:_GET_.2Fapi.2F0.6.2F.5Bnode.7Cway.7Crelation.5D.2F.23id)
 - build an `.osc.xml` changeset to apply to the original file. This changeset:
-  - creates and element that was missing in the data file but found in the API
+  - creates any element that was missing in the data file but found in the API
   - modifies parent elements that reference an element that has been deleted or
   never existed (API returned 404 or 410).
 - applies the changeset to the original data file via [osmium-tool apply-changes](http://docs.osmcode.org/osmium/v1.2.1/osmium-apply-changes.html)
