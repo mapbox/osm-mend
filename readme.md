@@ -40,7 +40,6 @@ USAGE: osm-mend <input file> <output file>
   Note that both an input file and an output location are required.
   Existing files in the output location will be overwritten.
 
-$
 ```
 
 Please note that the script relies on pre-built osmium-tool binary that is not
