@@ -7,7 +7,7 @@ var xml2js = require('xml2js');
 var mockosm = require('./mock.osm')(test);
 var _ = require('underscore');
 
-var fixDataFile = require('../lib/fix-data-file');
+var fixDataFile = require('..');
 fixDataFile.endpoint = 'http://localhost:20009';
 
 mockosm.start();
@@ -112,7 +112,7 @@ test('fixDataFile', function(assert) {
   var output = path.join(os.tmpdir(), crypto.randomBytes(8).toString('hex') + '.osm.xml');
   fixDataFile(fixture, output, function(err) {
     assert.ifError(err, 'success');
-    
+
     xml2js.parseString(fs.readFileSync(output, 'utf8'), function(err, found) {
       assert.ifError(err, 'wrote output file');
       xml2js.parseString(fs.readFileSync(path.resolve(__dirname, 'expected', 'fixed.osm.xml'), 'utf8'), function(err, expected) {

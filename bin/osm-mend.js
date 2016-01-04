@@ -2,7 +2,7 @@
 
 var path = require('path');
 var args = require('minimist')(process.argv.slice(2));
-var fixDataFile = require('../lib/fix-data-file');
+var fixDataFile = require('..');
 
 if (process.env.OSM_ENDPOINT) fixDataFile.endpoint = process.env.OSM_ENDPOINT;
 
